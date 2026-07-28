@@ -6,9 +6,18 @@ const items=codes=>codes.map((code,index,arr)=>({id:`${code}-${index+1}`,label:a
 const slug=s=>Array.from(s).map(c=>c.codePointAt(0).toString(16)).join('-');
 
 async function loadData(){
-  const [setsResponse,decorResponse]=await Promise.all([fetch('data/sets.json'),fetch('data/decor.json')]);
-  if(!setsResponse.ok||!decorResponse.ok)throw new Error('圖鑑資料載入失敗');
-  const [sets,{categories}]=await Promise.all([setsResponse.json(),decorResponse.json()]);
+  const [setsResponse,locationResponse,specialResponse]=await Promise.all([
+    fetch('data/sets.json'),
+    fetch('data/decor-location.json'),
+    fetch('data/decor-special.json')
+  ]);
+  if(!setsResponse.ok||!locationResponse.ok||!specialResponse.ok)throw new Error('圖鑑資料載入失敗');
+  const [sets,location,special]=await Promise.all([
+    setsResponse.json(),
+    locationResponse.json(),
+    specialResponse.json()
+  ]);
+  const categories=[...location.categories,...special.categories];
   data=categories.map(category=>({
     ...category,
     series:category.series.map(series=>({
