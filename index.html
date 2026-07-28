@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#202124">
-<title>Pikmin Bloom圖鑑</title>
+<title>Pikmin Bloom 圖鑑</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@ main{width:min(900px,calc(100% - 28px));margin:auto;padding:24px 0 56px}
 h1{margin:6px 0 4px;font-size:clamp(28px,5vw,44px);font-weight:600;letter-spacing:-.035em;line-height:1.08}
 .sub{margin:0;color:var(--muted);font-size:13px;font-weight:400}
 .dashboard{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:16px}
-.stat{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:12px;padding:10px 12px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;grid-template-areas:"label count" "bar percent";gap:4px 10px;align-items:center}
-.stat-label{grid-area:label;font-size:12px;color:var(--muted);font-weight:500}.stat-count{grid-area:count;font-size:18px;font-weight:600;white-space:nowrap}.stat-percent{grid-area:percent;font-size:11px;color:var(--muted);font-weight:400;white-space:nowrap}
+.stat{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:12px;padding:10px 12px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;grid-template-areas:"label percent" "bar bar";gap:8px 10px;align-items:center}
+.stat-label{grid-area:label;font-size:12px;color:var(--muted);font-weight:500}.stat-percent{grid-area:percent;font-size:11px;color:var(--muted);font-weight:400;white-space:nowrap}
 .bar{grid-area:bar;height:5px;background:#e4e4e4;border-radius:999px;overflow:hidden}.bar>div{height:100%;border-radius:inherit}
 .toolbar{display:grid;grid-template-columns:1fr auto;gap:8px;margin:16px 0 8px}
 .search{width:100%;border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 12px;font:inherit;font-weight:400;outline:none}.search:focus{border-color:#777;box-shadow:0 0 0 3px rgba(0,0,0,.08)}
@@ -50,7 +50,7 @@ h1{margin:6px 0 4px;font-size:clamp(28px,5vw,44px);font-weight:600;letter-spacin
 </style>
 </head>
 <body>
-<main><div class="eyebrow">Pikmin Bloom Collection</div><h1>Pikmin Bloom圖鑑</h1><p class="sub">Version 1.0.0</p><section class="dashboard" id="dashboard"></section><div class="toolbar"><input id="search" class="search" type="search" placeholder="搜尋類別、裝飾系列或皮克敏顏色"><button id="reset" class="reset">全部重設</button></div><div class="filters" id="filters"></div><section class="list" id="list"></section><div class="footer">最後更新：<span id="updatedAt">—</span></div></main><div class="toast" id="toast">已儲存</div>
+<main><div class="eyebrow">Pikmin Bloom Collection</div><h1>Pikmin Bloom 圖鑑</h1><p class="sub">Version 1.0.0</p><section class="dashboard" id="dashboard"></section><div class="toolbar"><input id="search" class="search" type="search" placeholder="搜尋類別、裝飾系列或皮克敏顏色"><button id="reset" class="reset">全部重設</button></div><div class="filters" id="filters"></div><section class="list" id="list"></section><div class="footer">最後更新：<span id="updatedAt">—</span></div></main><div class="toast" id="toast">已儲存</div>
 <script>
 const C={r:'紅',y:'黃',b:'藍',w:'白',u:'紫',p:'粉',k:'岩',i:'冰'},seven=['r','y','b','w','u','p','k'],eight=['r','y','b','u','w','p','k','i'];
 const items=codes=>codes.map((code,index,arr)=>({id:`${code}-${index+1}`,label:arr.filter(x=>x===code).length>1?`${C[code]} ${arr.slice(0,index+1).filter(x=>x===code).length}`:C[code]}));
@@ -131,15 +131,16 @@ data.forEach(c=>{c.id='c-'+slug(c.name);c.series.forEach((s,n)=>{s.id=`${c.id}-s
 const KEY='pikmin-bloom-collection-v5';let state=load(),filter='all',query='',expanded=new Set();
 function blank(){const o={};data.forEach(c=>c.series.forEach(s=>s.items.forEach(i=>o[`${s.id}-${i.id}`]=false)));return o}
 function load(){try{const v=JSON.parse(localStorage.getItem(KEY));if(v&&v.checked)return v}catch(e){}const checked=blank();try{const old=JSON.parse(localStorage.getItem('pikmin-bloom-collection-v4'));if(old?.items){data.forEach(c=>{const ov=old.items[c.id];if(!ov)return;c.series.forEach((s,si)=>s.items.forEach(i=>{const color=i.id.split('-')[0],source=si===0?ov.types:ov.rareTypes;if(source&&source[color]!==undefined)checked[`${s.id}-${i.id}`]=Boolean(source[color])}))})}}catch(e){}return{checked,updatedAt:Date.now()}}
-function save(){state.updatedAt=Date.now();localStorage.setItem(KEY,JSON.stringify(state));renderDashboard();document.getElementById('updatedAt').textContent=new Date(state.updatedAt).toLocaleString('zh-TW');toast()}
+function save(){state.updatedAt=Date.now();localStorage.setItem(KEY,JSON.stringify(state));renderDashboard();renderFilters();document.getElementById('updatedAt').textContent=new Date(state.updatedAt).toLocaleString('zh-TW');toast()}
 const counts=group=>{let total=0,done=0;data.filter(c=>!group||c.group===group).forEach(c=>c.series.forEach(s=>s.items.forEach(i=>{total++;if(state.checked[`${s.id}-${i.id}`])done++})));return{done,total,p:total?Math.round(done/total*100):0}};
 const progressColor=p=>p<40?'var(--progress-low)':p<70?'var(--progress-mid)':'var(--progress-high)';
-function renderDashboard(){const all=counts(),reg=counts('regular'),weather=counts('weather'),lim=counts('limited');document.getElementById('dashboard').innerHTML=[['全部 Decor',all],['常駐 Decor',reg],['天氣 Decor',weather],['特殊／活動限定 Decor',lim]].map(([name,x])=>`<article class="stat"><div class="stat-label">${name}</div><div class="stat-count">${x.done} / ${x.total}</div><div class="stat-percent">${x.p}%</div><div class="bar"><div style="width:${x.p}%;background:${progressColor(x.p)}"></div></div></article>`).join('')}
+function renderDashboard(){const all=counts(),reg=counts('regular'),weather=counts('weather'),lim=counts('limited');document.getElementById('dashboard').innerHTML=[['全部 Decor',all],['常駐 Decor',reg],['天氣 Decor',weather],['特殊／活動限定 Decor',lim]].map(([name,x])=>`<article class="stat"><div class="stat-label">${name}</div><div class="stat-percent">${x.p}%</div><div class="bar"><div style="width:${x.p}%;background:${progressColor(x.p)}"></div></div></article>`).join('')}
 function doneOfSeries(s){return s.items.filter(i=>state.checked[`${s.id}-${i.id}`]).length}
 function doneOfCategory(c){return c.series.reduce((n,s)=>n+doneOfSeries(s),0)}
 function totalOfCategory(c){return c.series.reduce((n,s)=>n+s.items.length,0)}
+function categoryComplete(c){return doneOfCategory(c)===totalOfCategory(c)}
 function regularComplete(c){const normal=c.series.filter(s=>!s.rare);return normal.every(s=>doneOfSeries(s)===s.items.length)}
-function match(c){const text=[c.name,...c.series.map(s=>s.name),...c.series.flatMap(s=>s.items.map(i=>i.label))].join(' ').toLowerCase();if(query&&!text.includes(query))return false;const d=doneOfCategory(c),t=totalOfCategory(c);if(filter==='regular'&&c.group!=='regular')return false;if(filter==='weather'&&c.group!=='weather')return false;if(filter==='limited'&&c.group!=='limited')return false;if(filter==='rare'&&!c.series.some(s=>s.rare))return false;if(filter==='unfinished'&&d===t)return false;if(filter==='done'&&d!==t)return false;return true}
+function match(c){const text=[c.name,...c.series.map(s=>s.name),...c.series.flatMap(s=>s.items.map(i=>i.label))].join(' ').toLowerCase();if(query&&!text.includes(query))return false;if(filter==='regular'&&c.group!=='regular')return false;if(filter==='weather'&&c.group!=='weather')return false;if(filter==='limited'&&c.group!=='limited')return false;if(filter==='rare'&&!c.series.some(s=>s.rare))return false;if(filter==='unfinished'&&categoryComplete(c))return false;if(filter==='done'&&!categoryComplete(c))return false;return true}
 function render(){
  const list=document.getElementById('list'),visible=data.filter(match);
  list.innerHTML=visible.map(c=>{
@@ -149,7 +150,8 @@ function render(){
  list.querySelectorAll('[data-toggle]').forEach(el=>el.addEventListener('click',()=>{const id=el.dataset.toggle;expanded.has(id)?expanded.delete(id):expanded.add(id);render()}));
  list.querySelectorAll('input[data-key]').forEach(el=>el.addEventListener('change',e=>{state.checked[e.target.dataset.key]=e.target.checked;save();render()}))
 }
-function renderFilters(){const defs=[['all','全部'],['unfinished','未完成'],['done','已完成'],['regular','常駐 Decor'],['weather','天氣 Decor'],['limited','特殊／活動限定 Decor'],['rare','稀有 Decor']];document.getElementById('filters').innerHTML=defs.map(([id,label])=>`<button class="filter ${filter===id?'active':''}" data-filter="${id}">${label}</button>`).join('');document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;renderFilters();render()})}
+function filterCount(id){if(id==='all')return data.length;if(id==='unfinished')return data.filter(c=>!categoryComplete(c)).length;if(id==='done')return data.filter(categoryComplete).length;if(id==='regular')return data.filter(c=>c.group==='regular').length;if(id==='weather')return data.filter(c=>c.group==='weather').length;if(id==='limited')return data.filter(c=>c.group==='limited').length;if(id==='rare')return data.filter(c=>c.series.some(s=>s.rare)).length;return 0}
+function renderFilters(){const defs=[['all','全部'],['unfinished','未完成'],['done','已完成'],['regular','常駐 Decor'],['weather','天氣 Decor'],['limited','特殊／活動限定 Decor'],['rare','稀有 Decor']];document.getElementById('filters').innerHTML=defs.map(([id,label])=>`<button class="filter ${filter===id?'active':''}" data-filter="${id}">${label} (${filterCount(id)})</button>`).join('');document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;renderFilters();render()})}
 function toast(){const t=document.getElementById('toast');t.classList.add('show');clearTimeout(window.__tt);window.__tt=setTimeout(()=>t.classList.remove('show'),900)}
 document.getElementById('search').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();render()});
 document.getElementById('reset').onclick=()=>{if(confirm('確定要清除所有圖鑑進度？')){state={checked:blank(),updatedAt:Date.now()};save();render()}};
