@@ -23,7 +23,7 @@
 <div class="toast" id="toast">已儲存</div>
 <script>
 const C={r:'紅皮',y:'黃皮',b:'藍皮',w:'白皮',u:'紫皮',p:'粉皮',k:'岩皮',i:'冰皮'};
-const seven=['r','y','b','w','u','p','k'],eight=[...seven,'i'];
+const seven=['r','y','b','w','u','p','k'],eight=['r','y','b','u','w','p','k','i'];
 const items=(codes)=>codes.map((code,index,arr)=>({id:`${code}-${index+1}`,label:arr.filter(x=>x===code).length>1?`${C[code]} ${arr.slice(0,index+1).filter(x=>x===code).length}`:C[code]}));
 const S=(name,codes,rare=false)=>({name,rare,items:items(codes)});
 const data=[
