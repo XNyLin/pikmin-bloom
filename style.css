@@ -1,7 +1,7 @@
 :root{--card:#fff;--text:#202124;--muted:#777;--line:#dedede;--shadow:0 6px 18px rgba(0,0,0,.06);--red:#e34b42;--yellow:#d9a400;--blue:#2680c2;--purple:#7b4bc4;--white:#8b8b8b;--pink:#df5a9b;--rock:#6f6862;--ice:#42aeb8;--progress-low:#d85c52;--progress-mid:#d99a20;--progress-high:#3d9b68}
 *{box-sizing:border-box}
 body{margin:0;background:linear-gradient(180deg,#fff 0,#f1f1f1 260px);color:var(--text);font-family:"Montserrat","Noto Sans TC","PingFang TC",sans-serif;font-weight:400;font-synthesis:none}
-main{width:min(800px,calc(100% - 28px));margin:auto;padding:24px 0 56px}
+main{width:min(640px,calc(100% - 28px));margin:auto;padding:24px 0 56px}
 .eyebrow{font-size:11px;font-weight:500;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}
 h1{margin:6px 0 4px;font-size:clamp(28px,5vw,44px);font-weight:600;letter-spacing:-.035em;line-height:1.08}
 .sub{margin:0;color:var(--muted);font-size:13px;font-weight:400}
@@ -35,4 +35,4 @@ h1{margin:6px 0 4px;font-size:clamp(28px,5vw,44px);font-weight:600;letter-spacin
 .empty{text-align:center;color:var(--muted);padding:30px 0}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:18px}
 .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,18px);opacity:0;background:#202124;color:#fff;padding:10px 15px;border-radius:999px;font-size:13px;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:900px){.dashboard{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.dashboard{grid-template-columns:1fr;gap:6px}.toolbar{grid-template-columns:1fr}.reset{height:40px}main{width:min(100% - 18px,800px);padding-top:18px}.category-toggle{align-items:flex-start}.category-main{gap:4px 12px}.category-title{font-size:18px}.category-meta{font-size:12px;gap:10px}.badge{font-size:14px}.series-row{align-items:flex-start;flex-wrap:wrap}.series-head{flex:1 0 100%}.pick{flex-basis:auto}}
+@media(max-width:760px){.dashboard{grid-template-columns:1fr;gap:6px}.toolbar{grid-template-columns:1fr}.reset{height:40px}main{width:min(100% - 18px,640px);padding-top:18px}.category-toggle{align-items:flex-start}.category-main{gap:4px 12px}.category-title{font-size:18px}.category-meta{font-size:12px;gap:10px}.badge{font-size:14px}.series-row{align-items:flex-start;flex-wrap:wrap}.series-head{flex:1 0 100%}.pick{flex-basis:auto}}
