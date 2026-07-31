@@ -2,7 +2,7 @@
   "categories": [
     {"group":"limited","icon":"🍄","name":"超級瑪利歐鑰匙圈","series":[{"name":"超級瑪利歐鑰匙圈","set":"mario4"}]},
     {"group":"limited","icon":"🧧","name":"農曆新年飾品：金色","series":[{"name":"農曆新年飾品：金色","set":"seven"}]},
-    {"group":"limited","icon":"🧤","name":"連指手套","series":[{"name":"連指手套","set":"seven"}]},
+    {"group":"limited","icon":"🧤","name":"連指手套","series":[{"name":"連指手套","set":"seven","released":"2022-12"}]},
     {"group":"limited","icon":"👓","name":"2024眼鏡","series":[{"name":"2024眼鏡","set":"seven"}]},
     {"group":"limited","icon":"💌","name":"逆轉情人節貼紙","series":[{"name":"逆轉情人節貼紙","set":"seven"}]},
     {"group":"limited","icon":"🎁","name":"禮物貼紙（金色）","series":[{"name":"禮物貼紙（金色）","set":"seven"}]},
@@ -17,15 +17,15 @@
     {"group":"limited","icon":"🎺","name":"迷你樂器：銅管樂團","series":[{"name":"迷你樂器：銅管樂團","set":"seven"}]},
     {"group":"limited","icon":"🏄","name":"衝浪板鑰匙圈","series":[{"name":"衝浪板鑰匙圈","set":"seven"}]},
     {"group":"limited","icon":"📷","name":"照片鈕扣徽章","series":[{"name":"照片鈕扣徽章","set":"red1"}]},
-    {"group":"limited","icon":"✨","name":"2025裝飾","series":[{"name":"2025裝飾","set":"eight"}]},
+    {"group":"limited","icon":"✨","name":"2025裝飾","series":[{"name":"2025裝飾","set":"eight","released":"2025-12"}]},
     {"group":"limited","icon":"🍼","name":"奶嘴","series":[{"name":"奶嘴","set":"red1"}]},
-    {"group":"limited","icon":"🍱","name":"日式年菜","series":[{"name":"日式年菜","set":"eight"}]},
-    {"group":"limited","icon":"🍫","name":"2026巧克力","series":[{"name":"2026巧克力","set":"eight"}]},
-    {"group":"limited","icon":"🎨","name":"彩色粉末","series":[{"name":"彩色粉末","set":"eight"}]},
-    {"group":"limited","icon":"👞","name":"荷蘭木鞋鑰匙圈","series":[{"name":"荷蘭木鞋鑰匙圈","set":"eight"}]},
-    {"group":"limited","icon":"🕹️","name":"遊戲卡匣","series":[{"name":"遊戲卡匣","set":"eight"}]},
-    {"group":"limited","icon":"🌼","name":"花冠","series":[{"name":"花冠","set":"eight"}]},
-    {"group":"limited","icon":"🎻","name":"迷你樂器：管弦樂團","series":[{"name":"迷你樂器：管弦樂團","set":"eight"}]},
+    {"group":"limited","icon":"🍱","name":"日式年菜","series":[{"name":"日式年菜","set":"eight","released":"2026-01"}]},
+    {"group":"limited","icon":"🍫","name":"2026巧克力","series":[{"name":"2026巧克力","set":"eight","released":"2026-02"}]},
+    {"group":"limited","icon":"🎨","name":"彩色粉末","series":[{"name":"彩色粉末","set":"eight","released":"2026-03"}]},
+    {"group":"limited","icon":"👞","name":"荷蘭木鞋鑰匙圈","series":[{"name":"荷蘭木鞋鑰匙圈","set":"eight","released":"2026-04"}]},
+    {"group":"limited","icon":"🕹️","name":"遊戲卡匣","series":[{"name":"遊戲卡匣","set":"eight","released":"2026-05"}]},
+    {"group":"limited","icon":"🌼","name":"花冠","series":[{"name":"花冠","set":"eight","released":"2026-06"}]},
+    {"group":"limited","icon":"🎻","name":"迷你樂器：管弦樂團","series":[{"name":"迷你樂器：管弦樂團","set":"eight","released":"2026-07"}]},
     {"group":"limited","icon":"🪸","name":"珊瑚","series":[{"name":"珊瑚","set":"seven"}]}
   ]
 }
