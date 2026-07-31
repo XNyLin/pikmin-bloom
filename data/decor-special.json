@@ -1,6 +1,6 @@
 {
   "categories": [
-    {"group":"limited","icon":"♟️","name":"棋子","series":[{"name":"棋子","codes":["r","r","y","y","b","b","u","u","w","w","k","k","p","p"],"released":"2022-07"}]},
+    {"group":"limited","icon":"♟️","name":"棋子","series":[{"name":"棋子","codes":["r","r","y","y","b","b","u","u","w","w","k","k","p","p"],"released":"2022-07","labels":["紅（黑）","紅（白）","黃（黑）","黃（白）","藍（黑）","藍（白）","紫（黑）","紫（白）","白（黑）","白（白）","岩（黑）","岩（白）","粉（黑）","粉（白）"]}]},
     {"group":"limited","icon":"🛹","name":"手指滑板","series":[{"name":"手指滑板","set":"seven","released":"2022-08"}]},
     {"group":"limited","icon":"🎴","name":"花牌","series":[{"name":"花牌","codes":["r","r","r","r","r","r","u","u","u","u","u","u"],"released":"2022-09"}]},
     {"group":"limited","icon":"🍬","name":"萬聖節糖果","series":[{"name":"萬聖節糖果","set":"seven","released":"2022-10"}]},
