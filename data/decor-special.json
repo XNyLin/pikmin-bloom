@@ -26,6 +26,20 @@
     {"group":"limited","icon":"🕹️","name":"遊戲卡匣","series":[{"name":"遊戲卡匣","set":"eight","released":"2026-05"}]},
     {"group":"limited","icon":"🌼","name":"花冠","series":[{"name":"花冠","set":"eight","released":"2026-06"}]},
     {"group":"limited","icon":"🎻","name":"迷你樂器：管弦樂團","series":[{"name":"迷你樂器：管弦樂團","set":"eight","released":"2026-07"}]},
-    {"group":"limited","icon":"🪸","name":"珊瑚","series":[{"name":"珊瑚","set":"seven"}]}
+    {"group":"limited","icon":"🪸","name":"珊瑚","series":[{"name":"珊瑚","set":"seven"}]},
+    {"group":"limited","icon":"♟️","name":"棋子","series":[{"name":"棋子","codes":["r","r","y","y","b","b","u","u","w","w","k","k","p","p"],"released":"2022-07"}]},
+    {"group":"limited","icon":"🛹","name":"手指滑板","series":[{"name":"手指滑板","set":"seven","released":"2022-08"}]},
+    {"group":"limited","icon":"🎴","name":"花牌","series":[{"name":"花牌","codes":["r","r","r","r","r","r","u","u","u","u","u","u"],"released":"2022-09"}]},
+    {"group":"limited","icon":"🍬","name":"萬聖節糖果","series":[{"name":"萬聖節糖果","set":"seven","released":"2022-10"}]},
+    {"group":"limited","icon":"🍪","name":"一週年紀念零食","series":[{"name":"一週年紀念零食","set":"seven","released":"2022-11"}]},
+    {"group":"limited","icon":"👓","name":"2023眼鏡","series":[{"name":"2023眼鏡","set":"seven","released":"2022-12"}]},
+    {"group":"limited","icon":"🧧","name":"農曆新年","series":[{"name":"農曆新年","codes":["r","y","b"],"released":"2023-01"}]},
+    {"group":"limited","icon":"🎁","name":"禮物貼紙","series":[{"name":"禮物貼紙","set":"seven","released":"2023-02"}]},
+    {"group":"limited","icon":"🥚","name":"復活節彩蛋","series":[{"name":"復活節彩蛋","set":"seven","released":"2023-04"}]},
+    {"group":"limited","icon":"👟","name":"運動鞋鑰匙圈","series":[{"name":"運動鞋鑰匙圈","set":"seven","released":"2023-05"}]},
+    {"group":"limited","icon":"🀄","name":"麻將牌","series":[{"name":"麻將牌","set":"seven","released":"2023-08"}]},
+    {"group":"limited","icon":"🍦","name":"冰淇淋","series":[{"name":"冰淇淋","set":"seven","released":"2023-09"}]},
+    {"group":"limited","icon":"🧩","name":"拼圖：2022夏日回憶","series":[{"name":"拼圖：2022夏日回憶","set":"seven","released":"2023-11"}]},
+    {"group":"limited","icon":"❄️","name":"冬季貼紙","series":[{"name":"冬季貼紙","set":"seven","released":"2023-12"}]}
   ]
 }
