@@ -25,6 +25,7 @@
     {"group":"limited","icon":"👞","name":"荷蘭木鞋鑰匙圈","series":[{"name":"荷蘭木鞋鑰匙圈","set":"eight"}]},
     {"group":"limited","icon":"🕹️","name":"遊戲卡匣","series":[{"name":"遊戲卡匣","set":"eight"}]},
     {"group":"limited","icon":"🌼","name":"花冠","series":[{"name":"花冠","set":"eight"}]},
-    {"group":"limited","icon":"🎻","name":"迷你樂器：管弦樂團","series":[{"name":"迷你樂器：管弦樂團","set":"eight"}]}
+    {"group":"limited","icon":"🎻","name":"迷你樂器：管弦樂團","series":[{"name":"迷你樂器：管弦樂團","set":"eight"}]},
+    {"group":"limited","icon":"🪸","name":"珊瑚","series":[{"name":"珊瑚","set":"seven"}]}
   ]
 }
