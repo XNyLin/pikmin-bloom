@@ -2,7 +2,7 @@ const C={r:'紅',y:'黃',b:'藍',w:'白',u:'紫',p:'粉',k:'岩',i:'冰'};
 const KEY='pikmin-bloom-collection-v5';
 let data=[],state,filter='all',query='',expanded=new Set();
 
-const items=codes=>codes.map((code,index,arr)=>({id:`${code}-${index+1}`,label:arr.filter(x=>x===code).length>1?`${C[code]} ${arr.slice(0,index+1).filter(x=>x===code).length}`:C[code]}));
+const items=(codes,labels=[])=>codes.map((code,index,arr)=>({id:`${code}-${index+1}`,label:labels[index]||(arr.filter(x=>x===code).length>1?`${C[code]} ${arr.slice(0,index+1).filter(x=>x===code).length}`:C[code])}));
 const slug=s=>Array.from(s).map(c=>c.codePointAt(0).toString(16)).join('-');
 
 async function loadData(){
@@ -23,7 +23,7 @@ async function loadData(){
     series:category.series.map(series=>({
       ...series,
       rare:Boolean(series.rare),
-      items:items(sets[series.set]||series.codes||[])
+      items:items(sets[series.set]||series.codes||[],series.labels)
     }))
   }));
   data.forEach(c=>{c.id='c-'+slug(c.name);c.series.forEach((s,n)=>{s.id=`${c.id}-s${n+1}`})});
