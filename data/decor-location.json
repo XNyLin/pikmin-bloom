@@ -24,12 +24,12 @@
     {"group":"regular","icon":"🛣️","name":"路邊","series":[{"name":"綠貼紙","set":"eight"},{"name":"藍貼紙","set":"eight"},{"name":"橙貼紙","set":"eight"},{"name":"金幣","set":"eight","released":"2023-03"},{"name":"金幣 (稀有)","set":"eight","rare":true}]},
     {"group":"regular","icon":"🍣","name":"壽司餐廳","series":[{"name":"壽司","set":"seven","released":"2022-04"}]},
     {"group":"regular","icon":"⛰️","name":"山丘","series":[{"name":"山丘別針徽章","set":"seven","released":"2022-06"}]},
-    {"group":"regular","icon":"🏟️","name":"體育館","series":[{"name":"體育館鑰匙圈","set":"seven","released":"2022-12"},{"name":"體育館鑰匙圈 (稀有)","set":"seven","rare":true}]},
+    {"group":"regular","icon":"🏟️","name":"體育館","series":[{"name":"體育館鑰匙圈","set":"seven","released":"2025-05"},{"name":"體育館鑰匙圈 (稀有)","set":"seven","rare":true}]},
     {"group":"weather","icon":"🌧️","name":"雨天","series":[{"name":"葉子帽","set":"blue3","released":"2022-06"}]},
     {"group":"weather","icon":"❄️","name":"下雪","series":[{"name":"雪","set":"white3","released":"2023-12"}]},
     {"group":"regular","icon":"🎡","name":"主題樂園","series":[{"name":"主題樂園門票","set":"themePark6","released":"2022-08"}]},
     {"group":"regular","icon":"🚏","name":"公車站","series":[{"name":"公車紙模型","set":"seven","released":"2022-09"}]},
-    {"group":"regular","icon":"🍝","name":"義式餐廳","series":[{"name":"披薩","set":"seven","released":"2023-02"},{"name":"義大利麵","set":"seven"}]},
+    {"group":"regular","icon":"🍝","name":"義式餐廳","series":[{"name":"披薩","set":"seven","released":"2023-02"},{"name":"義大利麵","set":"seven","released":"2025-04"}]},
     {"group":"regular","icon":"🍜","name":"拉麵店","series":[{"name":"拉麵鑰匙圈","set":"seven","released":"2023-04"}]},
     {"group":"regular","icon":"🌉","name":"橋樑","series":[{"name":"橋樑別針","set":"seven","released":"2023-05"}]},
     {"group":"regular","icon":"🏨","name":"飯店","series":[{"name":"飯店備品","set":"seven","released":"2023-08"}]},
@@ -40,8 +40,8 @@
     {"group":"regular","icon":"🔨","name":"五金行","series":[{"name":"工具","set":"seven","released":"2024-09"}]},
     {"group":"regular","icon":"🎓","name":"大學&學院","series":[{"name":"校徽別針","set":"university3","released":"2024-11"}]},
     {"group":"regular","icon":"🌮","name":"墨西哥餐廳","series":[{"name":"塔可餅","set":"seven","released":"2024-12"}]},
-    {"group":"regular","icon":"🧺","name":"自助洗衣店&乾洗店","series":[{"name":"洗衣用品","set":"seven"}]},
-    {"group":"regular","icon":"🥘","name":"韓國餐廳","series":[{"name":"韓國泡菜","set":"eight"}]},
-    {"group":"regular","icon":"✏️","name":"文具店","series":[{"name":"文具","set":"eight"}]}
+    {"group":"regular","icon":"🧺","name":"自助洗衣店&乾洗店","series":[{"name":"洗衣用品","set":"seven","released":"2025-03"}]},
+    {"group":"regular","icon":"🥘","name":"韓國餐廳","series":[{"name":"韓國泡菜","set":"eight","released":"2025-05"}]},
+    {"group":"regular","icon":"✏️","name":"文具店","series":[{"name":"文具","set":"eight","released":"2026-06"}]}
   ]
 }
