@@ -1,5 +1,6 @@
 {
   "categories": [
+    {"group":"limited","icon":"🍼","name":"奶嘴","series":[{"name":"奶嘴","set":"red1"}]},
     {"group":"limited","icon":"🧧","name":"2022農曆新年","series":[{"name":"2022農曆新年","codes":["r","y","b"],"labels":["紅","黃","藍"],"released":"2022-01"}]},
     {"group":"limited","icon":"♟️","name":"棋子","series":[{"name":"棋子","codes":["r","r","y","y","b","b","u","u","w","w","k","k","p","p"],"released":"2022-07","labels":["紅（黑）","紅（白）","黃（黑）","黃（白）","藍（黑）","藍（白）","紫（黑）","紫（白）","白（黑）","白（白）","岩（黑）","岩（白）","粉（黑）","粉（白）"]}]},
     {"group":"limited","icon":"🛹","name":"手指滑板","series":[{"name":"手指滑板","set":"seven","released":"2022-08"}]},
@@ -59,7 +60,6 @@
     {"group":"limited","icon":"🗿","name":"峇里島雕刻","series":[{"name":"峇里島雕刻","set":"eight","released":"2026-08"}]},
     {"group":"limited","icon":"🎁","name":"禮物貼紙（金色）","series":[{"name":"禮物貼紙（金色）","set":"seven"}]},
     {"group":"limited","icon":"🍦","name":"冰淇淋：經典","series":[{"name":"冰淇淋：經典","set":"seven"}]},
-    {"group":"limited","icon":"📷","name":"照片鈕扣徽章","series":[{"name":"照片鈕扣徽章","set":"red1"}]},
-    {"group":"limited","icon":"🍼","name":"奶嘴","series":[{"name":"奶嘴","set":"red1"}]}
+    {"group":"limited","icon":"📷","name":"照片鈕扣徽章","series":[{"name":"照片鈕扣徽章","set":"red1"}]}
   ]
 }
