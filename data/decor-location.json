@@ -10,7 +10,7 @@
     {"group":"regular","icon":"🌊","name":"水邊","series":[{"name":"擬餌","set":"seven"},{"name":"擬餌 (稀有)","set":"seven","rare":true,"released":"2024-09"}]},
     {"group":"regular","icon":"📮","name":"郵局","series":[{"name":"郵票","set":"seven"}]},
     {"group":"regular","icon":"🖼️","name":"美術館","series":[{"name":"畫框","set":"seven"}]},
-    {"group":"regular","icon":"✈️","name":"機場","series":[{"name":"飛機玩具","set":"seven"}]},
+    {"group":"regular","icon":"✈️","name":"機場","series":[{"name":"飛機玩具","set":"seven"},{"name":"機場行李吊牌","set":"eight","released":"2026-08"}]},
     {"group":"regular","icon":"🚉","name":"車站","series":[{"name":"電車紙模型","set":"seven"},{"name":"票券","set":"seven","released":"2022-05"},{"name":"票券 (稀有)","set":"seven","rare":true}]},
     {"group":"regular","icon":"🏖️","name":"海灘","series":[{"name":"貝殼","set":"seven"}]},
     {"group":"regular","icon":"🍔","name":"漢堡店","series":[{"name":"漢堡","set":"seven"}]},
